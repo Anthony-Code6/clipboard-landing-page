@@ -19,16 +19,53 @@
             padding: 0;
         }
 
-        .boton-ios{
+        .boton-ios {
         }
     }
 }
 
-#asociados{
+#details {
+    margin: 10rem 0;
+    text-align: center;
+    .container {
+        max-width: 820px !important;
+        #titulo {
+            font-weight: 600;
+            font-size: clamp(1rem, 4.44vh, 3rem);
+            color: hsl(210, 10%, 33%);
+        }
+        #detalles {
+            font-weight: 400;
+            color: hsl(201, 11%, 66%);
+            font-size: clamp(0.9rem, 3vh, 1.3rem);
+        }
+
+        .buttons {
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+    }
+}
+
+@media screen and (min-width:360px) and (max-width:460px) {
+    #details {
+        .container {
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    }
+}
+
+#asociados {
     padding: 30px 0;
 }
 
-.footer{
+.footer {
     background: hsl(201, 11%, 96%);
-    padding:5rem 0 ;
+    padding: 5rem 0;
 }
