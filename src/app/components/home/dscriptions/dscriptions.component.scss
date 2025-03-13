@@ -1,0 +1,15 @@
+.contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    #titulo {
+        font-weight: 600;
+        font-size: clamp(1rem, 4.44vh, 3rem);
+        color: hsl(210, 10%, 33%);
+    }
+    #detalles {
+        font-weight: 400;
+        color: hsl(201, 11%, 66%);
+        font-size: clamp(0.9rem, 3vh, 1.3rem);
+    }
+}

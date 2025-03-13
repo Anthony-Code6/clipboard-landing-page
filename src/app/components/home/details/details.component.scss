@@ -1,0 +1,24 @@
+:root {
+    --color: hsl(210, 10%, 33%);
+    --descripcion: hsl(201, 11%, 66%);
+}
+
+.contendor-details-software {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    .logo {
+    }
+
+    #titulo {
+        color: hsl(210, 10%, 33%);
+        font-weight: 600;
+    }
+
+    #descripcion {
+        font-size: clamp(.92rem, 2vh, 2rem);
+        color: hsl(201, 11%, 66%);
+        font-weight: 400;
+    }
+}

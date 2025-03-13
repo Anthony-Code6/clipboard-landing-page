@@ -3,31 +3,58 @@
     <!-- <app-imagen imgUrl="assets/images/image-computer.png" altImg="Computer Imagen"/> -->
 </div>
 
+<section id="details-access">
+    <div class="container">
+        <div class="detalles">
+            <app-dscriptions [contenido]="contenido3()" />
+        </div>
+        <div id="img-access">
+            <app-imagen [imgUrl]="img2()" [imgWidth]="200" [imgHeight]="600" altImg="Imagen 2" />
+        </div>
+    </div>
+</section>
+
+<section id="details-software">
+    <div class="container">
+        <div class="detalles">
+            <app-dscriptions [contenido]="contenido4()" />
+        </div>
+        <div class="row g-3 justify-content-between" id="img-asociados">
+            @for (item of detailsSoftware(); track $index) {
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <app-details [detailsSoftware]="item" />
+            </div>
+            }
+        </div>
+    </div>
+</section>
 
 <section id="asociados">
-    <app-asociados />
+    <div class="container">
+        <div class="row g-2 justify-content-between" id="img-asociados">
+            @for (item of asociados(); track $index) {
+            <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-sm-12">
+                <app-imagen [imgUrl]="item.asociado" [imgWidth]="290" [imgHeight]="50" [altImg]="item.asociado" />
+            </div>
+            }
+        </div>
+    </div>
 </section>
 
 <section id="details">
     <div class="container">
-        <h4 id="titulo">Clipboard for iOS and Mac OS</h4>
-        <p id="detalles">
-            Available for free on the App Store Download for Mac or iOS, sync with iCloud and you`re ready to start
-            adding to your clipboard.
-        </p>
+        <app-dscriptions [contenido]="contenido5()">
+            <div class="buttons">
+                <app-botton type="button" color="hsl(171, 66%, 44%)">
+                    Download for iOS
+                </app-botton>
 
-        <div class="buttons">
-            <app-botton type="button" color="hsl(171, 66%, 44%)">
-                Download for iOS
-            </app-botton>
-
-            <app-botton type="button" color="hsl(233, 100%, 69%)">
-                Download for Mac
-            </app-botton>
-        </div>
+                <app-botton type="button" color="hsl(233, 100%, 69%)">
+                    Download for Mac
+                </app-botton>
+            </div>
+        </app-dscriptions>
     </div>
-
-
 </section>
 
 <div class="footer">
