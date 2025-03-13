@@ -31,6 +31,10 @@
                     text-decoration: none;
                     font-weight: 600;
                 }
+
+                a:hover {
+                    color: hsl(171, 66%, 44%);
+                }
             }
 
             li:nth-child(1) {
@@ -78,7 +82,6 @@
         }
     }
 }
-
 
 @media screen and (min-width: 320px) and (max-width: 460px) {
     #footer {

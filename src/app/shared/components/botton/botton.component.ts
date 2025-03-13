@@ -7,6 +7,6 @@ import { Component, input } from '@angular/core';
   styleUrl: './botton.component.scss',
 })
 export class BottonComponent {
-  type = input<'button'|'submit'>();
+  type = input<'button' | 'submit'>();
   color = input<string>('')
 }
