@@ -1,0 +1,17 @@
+button{
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: clamp(.3rem, 2vh, .8rem);
+    padding: 10px;
+    background-color: var(--button-color);
+    border-radius: 20px;
+    font-weight: 600;
+    box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+    transition: all 500ms ease-in;
+}
+
+button:hover{
+    transition: all 500ms ease-in;
+    background-color: ligthten(var(--button-color), 100%);
+}
