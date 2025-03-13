@@ -1,0 +1,25 @@
+<div id="footer" class="container">
+    <div id="logo">
+        <app-imagen imgUrl="{{logo()}}" [imgWidth]="sizeImg()" [imgHeight]="sizeImg()" [altImg]="'Logo'" />
+    </div>
+    <div id="links">
+        <ul>
+            @for (item of links(); track $index) {
+            <li>
+                <a routerLink="{{item.links}}">{{item.links}}</a>
+            </li>
+            }
+        </ul>
+    </div>
+    <div id="social">
+        <ul>
+            @for (item of socials(); track $index) {
+            <li>
+                <a routerLink="{{item.social}}">
+                    <app-imagen imgUrl="{{item.social}}" [imgWidth]="30" [imgHeight]="30" [altImg]="item.social" />
+                </a>
+            </li>
+            }
+        </ul>
+    </div>
+</div>

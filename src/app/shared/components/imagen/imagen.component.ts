@@ -9,4 +9,6 @@ import { NgOptimizedImage } from '@angular/common';
 export class ImagenComponent {
   imgUrl = input<string>()
   altImg = input<string>()
+  imgWidth= input<number>(120)
+  imgHeight= input<number>(120)
 }
