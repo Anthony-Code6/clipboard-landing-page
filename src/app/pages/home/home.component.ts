@@ -20,10 +20,17 @@ export class HomeComponent {
   widthImg = signal<number>(600)
   widthImg1 = signal<number>(750)
 
+  logo = signal<string>('assets/images/logo.svg')
+
+  contenido1 = signal<Contenido>({
+    titulo: 'A history of everything you copy',
+    descripcion: "Clipboard allows you to track and organize everything you copy. Instantly access your clipboard on all your devices."
+  })
+
 
   contenido2 = signal<Contenido>({
     titulo: 'Keep track of your snippets',
-    descripcion: " Clipboard instantly stores any item you copy in the cloud, meaning you can access your snippets immediately on all your devices. Our Mac and iOS apps will help you organize everything."
+    descripcion: "Clipboard instantly stores any item you copy in the cloud, meaning you can access your snippets immediately on all your devices. Our Mac and iOS apps will help you organize everything."
   })
 
   listcontent = signal<Contenido[]>([
@@ -106,13 +113,20 @@ export class HomeComponent {
     const target = event.target as Window
 
     const width = target.innerWidth
-    if (width < 830) {
-      this.widthImg.set(width * 0.7)
+    if (width < 1553) {
       this.widthImg1.set(width * 0.7)
     } else {
-      this.widthImg.set(600);
       this.widthImg1.set(750)
     }
+
+    if (width < 830) {
+      this.widthImg.set(width * 0.7)
+
+    } else {
+      this.widthImg.set(600);
+    }
+
+
 
   }
 }

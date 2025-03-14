@@ -1,3 +1,21 @@
+#main {
+    padding: 6rem 0 4rem 0;
+    text-align: center;
+    #logo-history {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+    .container {
+        max-width: 820px !important;
+        .buttons {
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+    }
+}
+
 #details-keep {
     padding: 8rem 0;
     .container {
@@ -13,6 +31,7 @@
             gap: 80px;
             #logo-keep {
                 padding-left: 0;
+                padding-right: 0;
                 margin: 0;
             }
             #contenido-keep {
@@ -42,35 +61,6 @@
         .img-access {
             width: 100%;
         }
-    }
-}
-
-@media screen and (min-width: 330px) and (max-width: 830px) {
-    #details-keep {
-        padding: 8rem 0;
-        .container {
-            text-align: center;
-            max-width: 820px !important;
-        }
-
-        .descripcion {
-            margin-top: 6rem;
-            .row {
-                #logo-keep {
-                    padding-left: 0;
-                    margin: 0;
-                    text-align: center;
-                }
-                #contenido-keep {
-                    text-align: center;
-                    width: auto;
-                }
-            }
-        }
-    }
-
-    #details-access {
-        padding: 1rem 0;
     }
 }
 
@@ -108,12 +98,41 @@
     }
 }
 
-@media screen and (min-width: 360px) and (max-width: 460px) {
-    #details-software {
-        padding: 2rem 0;
-    }
+.footer {
+    background: hsl(201, 11%, 96%);
+    padding: 5rem 0;
+}
 
-    #details {
+@media screen and (max-width: 1552px) {
+    #details-keep {
+        padding: 4rem 0;
+        .container {
+            text-align: center;
+            max-width: 820px !important;
+        }
+
+        .descripcion {
+            margin-top: 6rem;
+            .row {
+                justify-content: center;
+                #logo-keep {
+                    padding-left: 12px;
+                    padding-right: 12px;
+                    margin: 0;
+                    text-align: center;
+                }
+                #contenido-keep {
+                    text-align: center;
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 830px) {
+    #main {
+        padding: 5rem 0;
         .container {
             .buttons {
                 display: flex;
@@ -122,9 +141,33 @@
             }
         }
     }
-}
 
-.footer {
-    background: hsl(201, 11%, 96%);
-    padding: 5rem 0;
+    #details-access {
+        padding: 1rem 0;
+    }
+
+    #details-software {
+        padding: 0.7rem 0;
+    }
+
+    #asociados {
+        padding: 3rem 0;
+        .container {
+            #img-asociados {
+                text-align: center;
+                gap: 20px;
+            }
+        }
+    }
+
+    #details {
+        padding: 6rem 0;
+        .container {
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    }
 }

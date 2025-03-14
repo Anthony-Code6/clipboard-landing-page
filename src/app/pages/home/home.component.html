@@ -1,7 +1,21 @@
-<div class="container-fluid">
+<section id="main">
+    <div id="logo-history">
+        <app-imagen imgUrl="{{logo()}}" [imgWidth]="120" [imgHeight]="120" [altImg]="'Logo'" />
+    </div>
+    <div class="container">
+        <app-dscriptions [contenido]="contenido1()">
+            <div class="buttons">
+                <app-botton type="button" color="hsl(171, 66%, 44%)">
+                    Download for iOS
+                </app-botton>
 
-    <!-- <app-imagen imgUrl="assets/images/image-computer.png" altImg="Computer Imagen"/> -->
-</div>
+                <app-botton type="button" color="hsl(233, 100%, 69%)">
+                    Download for Mac
+                </app-botton>
+            </div>
+        </app-dscriptions>
+    </div>
+</section>
 
 <section id="details-keep">
     <div class="container">
