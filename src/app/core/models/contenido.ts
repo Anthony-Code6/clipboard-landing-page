@@ -1,4 +1,4 @@
 export interface Contenido {
     titulo: string;
-    despcioncion: string;
+    descripcion: string;
 }

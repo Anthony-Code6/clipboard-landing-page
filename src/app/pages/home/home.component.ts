@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
 import { ImagenComponent } from "../../shared/components/imagen/imagen.component";
 import { BottonComponent } from "../../shared/components/botton/botton.component";
 import { FooterComponent } from "../../shared/layouts/footer/footer.component";
@@ -16,16 +16,43 @@ import { Contenido } from '../../core/models/contenido';
 })
 export class HomeComponent {
 
+  // variables
+  widthImg = signal<number>(600)
+  widthImg1 = signal<number>(750)
+
+
+  contenido2 = signal<Contenido>({
+    titulo: 'Keep track of your snippets',
+    descripcion: " Clipboard instantly stores any item you copy in the cloud, meaning you can access your snippets immediately on all your devices. Our Mac and iOS apps will help you organize everything."
+  })
+
+  listcontent = signal<Contenido[]>([
+    {
+      titulo: 'Quick Search',
+      descripcion: 'Easily search your snippets by content, category, web address, application, and more.'
+    },
+    {
+      titulo: 'iCloud Sync',
+      descripcion: 'Instantly saves and syncs snippets across all your devices.'
+    },
+    {
+      titulo: 'Complete History',
+      descripcion: 'Retrieve any snippets from the first moment you started using the app.'
+    }
+  ])
+
+  img1 = signal<string>('assets/images/image-computer.png')
+
   contenido3 = signal<Contenido>({
     titulo: 'Access Clipboard anywhere',
-    despcioncion: "Whether you’re on the go, or at your computer, you can access all your Clipboard snippets in a few simple clicks."
+    descripcion: "Whether you’re on the go, or at your computer, you can access all your Clipboard snippets in a few simple clicks."
   })
 
   img2 = signal<string>('assets/images/image-devices.png')
 
   contenido4 = signal<Contenido>({
     titulo: 'Supercharge your workflow',
-    despcioncion: "We’ve got the tools to boost your productivity."
+    descripcion: "We’ve got the tools to boost your productivity."
   })
 
   detailsSoftware = signal<Details[]>(
@@ -70,6 +97,22 @@ export class HomeComponent {
 
   contenido5 = signal<Contenido>({
     titulo: 'Clipboard for iOS and Mac OS',
-    despcioncion: "Available for free on the App Store Download for Mac or iOS, sync with iCloud and you`re ready to start adding to your clipboard."
+    descripcion: "Available for free on the App Store Download for Mac or iOS, sync with iCloud and you`re ready to start adding to your clipboard."
   })
+
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    const target = event.target as Window
+
+    const width = target.innerWidth
+    if (width < 830) {
+      this.widthImg.set(width * 0.7)
+      this.widthImg1.set(width * 0.7)
+    } else {
+      this.widthImg.set(600);
+      this.widthImg1.set(750)
+    }
+
+  }
 }
