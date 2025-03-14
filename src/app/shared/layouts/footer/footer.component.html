@@ -16,7 +16,7 @@
             @for (item of socials(); track $index) {
             <li>
                 <a routerLink="{{item.social}}">
-                    <app-imagen imgUrl="{{item.social}}" [imgWidth]="30" [imgHeight]="30" [altImg]="item.social" />
+                    <img src="{{item.social}}" [width]="30" [height]="30" alt="{{item.social}}">
                 </a>
             </li>
             }
