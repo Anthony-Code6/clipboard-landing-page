@@ -17,8 +17,9 @@ import { Contenido } from '../../core/models/contenido';
 export class HomeComponent {
 
   // variables
-  widthImg = signal<number>(600)
-  widthImg1 = signal<number>(750)
+  heightImg = signal<number>(600)
+  widthImg1 = signal<number>(1300)
+  heightImg1 = signal<number>(750)
 
   logo = signal<string>('assets/images/logo.svg')
 
@@ -114,16 +115,18 @@ export class HomeComponent {
 
     const width = target.innerWidth
     if (width < 1553) {
+      this.heightImg1.set(width * 0.7)
       this.widthImg1.set(width * 0.7)
     } else {
-      this.widthImg1.set(750)
+      this.heightImg1.set(750)
+      this.widthImg1.set(1300)
     }
 
     if (width < 830) {
-      this.widthImg.set(width * 0.7)
+      this.heightImg.set(width * 0.7)
 
     } else {
-      this.widthImg.set(600);
+      this.heightImg.set(600);
     }
 
 

@@ -23,12 +23,12 @@
             <app-dscriptions [contenido]="contenido2()" />
         </div>
     </div>
-    <div class="descripcion container-fluid">
-        <div class="row">
-            <div class="col-auto" id="logo-keep">
-                <app-imagen [imgUrl]="img1()" [imgWidth]="1300" [imgHeight]="widthImg1()" altImg="Imagen 1" />
+    <div class="descripcion ">
+        <div class="row-descripcion">
+            <div id="logo-keep">
+                <app-imagen [imgUrl]="img1()" [imgWidth]="1300" [imgHeight]="heightImg1()" altImg="Imagen 1" />
             </div>
-            <div class="col-auto col-sm-12" id="contenido-keep">
+            <div id="contenido-keep">
                 @for (item of listcontent(); track $index) {
                 <app-dscriptions [contenido]="item" />
                 }
@@ -43,7 +43,7 @@
             <app-dscriptions [contenido]="contenido3()" />
         </div>
         <div id="img-access">
-            <app-imagen [imgUrl]="img2()" [imgWidth]="200" [imgHeight]="widthImg()" altImg="Imagen 2" />
+            <app-imagen [imgUrl]="img2()" [imgWidth]="200" [imgHeight]="heightImg()" altImg="Imagen 2" />
         </div>
     </div>
 </section>
